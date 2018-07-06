@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Rey Marcos Ivan -Curriculum- </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
+    <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-none d-lg-block">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="C:\Users\Usuario\Downloads\startbootstrap-resume-gh-pages\img\asd.jpg" alt="">
+        </span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">Sobre Mi</a>
+          </li>
+          <!--Experiencia 1 -->
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#education">Estudios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#skills">Conocimientos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#interests">Intereses</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid p-0">
+
+      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+        <div class="my-auto">
+          <h1 class="mb-0">Marcos Ivan
+            <span class="text-primary">Rey</span>
+          </h1>
+          <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+            <a href="mailto:name@email.com">reymarcos51@gmail.com</a>
+          </div>
+          <p class="mb-5">Actualmente soy estudiante de Programacion con energia para </p>
+          <ul class="list-inline list-social-icons mb-0">
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://twitter.com/ReyMarquis">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"> Marcos</i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.linkedin.com/in/marcos-ivan-rey-827438162/">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <span class="fa-stack fa-lg">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Experiencia 2-->
+      
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+        <div class="my-auto">
+          <h2 class="mb-5">Estudios</h2>
+
+
+          {% for estudio in estudios %}
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-content mr-auto">
+              <h3 class="mb-0">{{estudio.lugar}}</h3>
+              <div class="subheading mb-3">{{estudio.sede}}</div>
+              <div>{{estudio.carrera}}</div>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">{{estudio.comienzo}} - {{estudio.fin}}</span>
+            </div>
+          </div>
+
+          {% endfor %}
+          
+
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+        <div class="my-auto">
+          <h2 class="mb-5">Conocimientos</h2>
+
+          <div class="subheading mb-3">Lenguajes y Herramientas</div>
+          <ul class="list-inline list-icons">
+            <li class="list-inline-item">
+              <i class="devicon-python-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-django-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-csharp-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-php-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-c-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-typescript-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-jquery-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-javascript-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-html5-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-bootstrap-plain"></i>
+            </li>
+
+            <li class="list-inline-item">
+              <i class="devicon-git-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-github-plain"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicon-linux-plain"></i>
+            </li>
+          </ul>
+
+          <div class="subheading mb-3">Conocimientos extras</div>
+          <ul class="fa-ul mb-0">
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Base de Datos: MySql | SqlLite</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Lenguajes de Programacion: {% for lenguaje in lenguajes %} | {{lenguaje.nombre}}{% endfor %}</li>
+            <li>
+              <i class="fa-li fa fa-check"></i>
+              Conocimientos Basicos de Linux</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+        <div class="my-auto">
+          <h2 class="mb-5">Intereses</h2>
+          <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skiier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+          <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technolgy advancements in the front-end web development world.</p>
+        </div>
+      </section>
+
+      
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
+  </body>
+
+</html>
